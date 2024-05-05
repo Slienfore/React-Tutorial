@@ -2,9 +2,10 @@ import { useState } from "react";
 interface Props {
   items: string[];
   heading: string;
+  onSelectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
   // useState(initialState)
   // set 函数，例如 setSomething(nextState)
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -24,7 +25,10 @@ function ListGroup({ items, heading }: Props) {
                 ? "list-group-item active"
                 : "list-group-item"
             }
-            onClick={() => setSelectedIndex(index)}
+            onClick={() => {
+              setSelectedIndex(index);
+              onSelectItem(item); // 子向父传值
+            }}
           >
             {item}
           </li>
