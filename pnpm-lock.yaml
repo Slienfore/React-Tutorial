@@ -14,6 +14,9 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.3.1(react@18.3.1)
+  react-icons:
+    specifier: 4.7.1
+    version: 4.7.1(react@18.3.1)
   styled-components:
     specifier: ^6.1.9
     version: 6.1.9(react-dom@18.3.1)(react@18.3.1)
@@ -783,6 +786,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
+    dev: false
+
+  /react-icons@4.7.1(react@18.3.1):
+    resolution: {integrity: sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==, tarball: https://registry.npmmirror.com/react-icons/-/react-icons-4.7.1.tgz}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.3.1
     dev: false
 
   /react-refresh@0.14.2:
