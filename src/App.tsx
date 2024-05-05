@@ -4,11 +4,12 @@ import ListGroup from "./components/ListGroup/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button/Button";
 import { BsFillCalendarFill } from "react-icons/bs";
+import Like from "./components/Like";
 
 function App() {
   return (
     <div>
-      <Button onClick={() => {}}>My Button</Button>
+      <Like onClick={() => console.log("clicked")}></Like>
     </div>
   );
 }
