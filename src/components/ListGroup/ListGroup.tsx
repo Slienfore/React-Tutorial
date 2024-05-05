@@ -1,4 +1,4 @@
-import "./ListGroup.css";// 引入 css
+import styles from "./ListGroup.module.css";// 引入 css
 import { useState } from "react";
 interface Props {
   items: string[];
@@ -17,7 +17,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
       {/* 避免 null 渲染 */}
       {!items.length && <p>No item found</p>}
 
-      <ul className="list-group">
+      <ul className={[styles.listGroup, styles.container].join(' ')}>
         {items.map((item, index) => (
           <li
             key={item}
