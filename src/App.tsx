@@ -1,25 +1,24 @@
 import { useState } from "react";
 import "./App.css";
+import ListGroup from "./components/ListGroup/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 
 function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
+  const items = ["China", "New York", "Tokyo", "London", "San Francisco"];
+
+  // 子向父传值, 传递函数
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
 
   return (
     <div>
-      {/* && 进行控制 组件的显示与隐藏 */}
-      {alertVisible && (
-        // 传递 onClose 回调进行关闭
-        <Alert onClose={() => setAlertVisibility(false)}>
-          Alert exercise...
-        </Alert>
-      )}
-
-      {/* 按钮控制 alert 显示与隐藏 */}
-      <Button onClick={() => setAlertVisibility(true)} color="primary">
-        My Button
-      </Button>
+      <ListGroup
+        items={items}
+        heading="Cities"
+        onSelectItem={handleSelectItem}
+      ></ListGroup>
     </div>
   );
 }
