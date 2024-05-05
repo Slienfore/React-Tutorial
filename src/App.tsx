@@ -2,13 +2,13 @@ import { useState } from "react";
 import "./App.css";
 import ListGroup from "./components/ListGroup/ListGroup";
 import Alert from "./components/Alert";
-import Button from "./components/Button";
+import Button from "./components/Button/Button";
 import { BsFillCalendarFill } from "react-icons/bs";
 
 function App() {
   return (
     <div>
-      <BsFillCalendarFill color='#9d5da9' size='40'/>
+      <Button onClick={() => {}}>My Button</Button>
     </div>
   );
 }

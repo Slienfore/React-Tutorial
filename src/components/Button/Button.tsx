@@ -1,3 +1,5 @@
+import styles from './Button.module.css'
+
 interface Props {
   children: string; // 字符型子组件
   color?: 'primary' | 'success' | 'secondary' | 'danger'; // 接收颜色(可选)
@@ -6,7 +8,7 @@ interface Props {
 
 function Button({ children, color = "primary", onClick }: Props) {
   return (
-    <button type="button" className={"btn btn-" + color} onClick={onClick}>
+    <button type="button" className={[styles.btn, styles['btn-' + color]].join(' ')} onClick={onClick}>
       {children}
     </button>
   );
