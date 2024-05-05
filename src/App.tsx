@@ -13,7 +13,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor: 'skyblue'}}>
       <ListGroup
         items={items}
         heading="Cities"
