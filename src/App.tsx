@@ -1,13 +1,12 @@
 import "./App.css";
-import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 function App() {
   return (
     <div>
-      <Alert>
-        {/* 将 jsx 作为子组件传递 -> children */}
-        <h1>Hello World</h1>
-      </Alert>
+      <Button onClick={() => console.log("Click!")} color="primary">
+        My Button
+      </Button>
     </div>
   );
 }
