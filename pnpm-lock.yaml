@@ -9,8 +9,8 @@ dependencies:
     specifier: 5.2.3
     version: 5.2.3(@popperjs/core@2.11.8)
   immer:
-    specifier: 9.0.19
-    version: 9.0.19
+    specifier: 10.1.1
+    version: 10.1.1
   react:
     specifier: ^18.2.0
     version: 18.3.1
@@ -23,6 +23,9 @@ dependencies:
   styled-components:
     specifier: ^6.1.9
     version: 6.1.9(react-dom@18.3.1)(react@18.3.1)
+  use-immer:
+    specifier: ^0.9.0
+    version: 0.9.0(immer@10.1.1)(react@18.3.1)
 
 devDependencies:
   '@types/react':
@@ -708,8 +711,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /immer@9.0.19:
-    resolution: {integrity: sha512-eY+Y0qcsB4TZKwgQzLaE/lqYMlKhv5J9dyd2RhhtGhNo2njPXDqU9XPfcNfa3MIDsdtZt5KlkIsirlo4dHsWdQ==, tarball: https://registry.npmmirror.com/immer/-/immer-9.0.19.tgz}
+  /immer@10.1.1:
+    resolution: {integrity: sha512-s2MPrmjovJcoMaHtx6K11Ra7oD05NT97w1IC5zpMkT6Atjr7H8LjaDd81iIxUYpMKSRRNMJE703M1Fhr/TctHw==, tarball: https://registry.npmmirror.com/immer/-/immer-10.1.1.tgz}
     dev: false
 
   /js-tokens@4.0.0:
@@ -898,6 +901,16 @@ packages:
       escalade: 3.1.2
       picocolors: 1.0.0
     dev: true
+
+  /use-immer@0.9.0(immer@10.1.1)(react@18.3.1):
+    resolution: {integrity: sha512-/L+enLi0nvuZ6j4WlyK0US9/ECUtV5v9RUbtxnn5+WbtaXYUaOBoKHDNL9I5AETdurQ4rIFIj/s+Z5X80ATyKw==, tarball: https://registry.npmmirror.com/use-immer/-/use-immer-0.9.0.tgz}
+    peerDependencies:
+      immer: '>=2.0.0'
+      react: ^16.8.0 || ^17.0.1 || ^18.0.0
+    dependencies:
+      immer: 10.1.1
+      react: 18.3.1
+    dev: false
 
   /vite@4.5.3:
     resolution: {integrity: sha512-kQL23kMeX92v3ph7IauVkXkikdDRsYMGTVl5KY2E9OY4ONLvkHf04MDTbnfo6NKxZiDLWzVpP5oTa8hQD8U3dg==, tarball: https://registry.npmmirror.com/vite/-/vite-4.5.3.tgz}

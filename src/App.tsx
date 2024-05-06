@@ -6,9 +6,10 @@ import Button from "./components/Button/Button";
 import { BsFillCalendarFill } from "react-icons/bs";
 import Like from "./components/Like";
 import { produce } from "immer";
+import { useImmer } from "use-immer";
 
 function App() {
-  const [bugs, setBugs] = useState([
+  const [bugs, setBugs] = useImmer([
     { id: 1, title: "Big" },
     { id: 2, title: "Small" },
   ]);
@@ -16,16 +17,12 @@ function App() {
   const handleClick = () => {
     // setBugs( bugs.map((item) => (item.id === 2 ? { ...item, title: "Bug" } : item)) );
 
-    setBugs(
+    setBugs((draft) => {
 
-      produce((draft) => {
-
-        const bug = draft.find((item) => item.id === 2)!;
-        bug.title = "Bug";
-
-      })
+      const bug = draft.find((item) => item.id === 2)!;
+      bug.title = "Bug";
       
-    );
+    });
   };
 
   return (
