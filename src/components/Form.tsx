@@ -1,30 +1,18 @@
 import { FormEvent, useState } from "react";
+import { FieldValues, useForm } from "react-hook-form";
 
 const Form = () => {
-  const [person, setPerson] = useState<{ name: string; age: number | string }>({
-    name: "",
-    age: "",
-  });
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault(); // prevent form default submit action
-    console.log(person);
-  };
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data: FieldValues) => console.log(data);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
         </label>
-        {/* controlled component ->受控组件*/}
-        {/* onChange -> 将状态管理交给 React */}
-        {/* value -> 实现数据流向页面 */}
         <input
-          onChange={(e) => setPerson({ ...person, name: e.target.value })}
-
-          value={person.name}
-          
+          {...register("name")}
           id="name"
           type="text"
           className="form-control"
@@ -34,14 +22,8 @@ const Form = () => {
         <label htmlFor="age" className="form-label">
           Age
         </label>
-        {/* controlled component ->受控组件*/}
-        {/* onChange -> 将状态管理交给 React */}
-        {/* value -> 实现数据流向页面 */}
         <input
-          onChange={(e) =>
-            setPerson({ ...person, age: parseInt(e.target.value) })
-          }
-          value={person.age}
+          {...register("age")}
           id="age"
           type="number"
           className="form-control"
