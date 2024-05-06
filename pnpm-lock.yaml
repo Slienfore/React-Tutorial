@@ -8,6 +8,9 @@ dependencies:
   bootstrap:
     specifier: 5.2.3
     version: 5.2.3(@popperjs/core@2.11.8)
+  immer:
+    specifier: 9.0.19
+    version: 9.0.19
   react:
     specifier: ^18.2.0
     version: 18.3.1
@@ -704,6 +707,10 @@ packages:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==, tarball: https://registry.npmmirror.com/has-flag/-/has-flag-3.0.0.tgz}
     engines: {node: '>=4'}
     dev: true
+
+  /immer@9.0.19:
+    resolution: {integrity: sha512-eY+Y0qcsB4TZKwgQzLaE/lqYMlKhv5J9dyd2RhhtGhNo2njPXDqU9XPfcNfa3MIDsdtZt5KlkIsirlo4dHsWdQ==, tarball: https://registry.npmmirror.com/immer/-/immer-9.0.19.tgz}
+    dev: false
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==, tarball: https://registry.npmmirror.com/js-tokens/-/js-tokens-4.0.0.tgz}
