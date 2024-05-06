@@ -7,29 +7,16 @@ import { BsFillCalendarFill } from "react-icons/bs";
 import Like from "./components/Like";
 import { produce } from "immer";
 import { useImmer } from "use-immer";
+import ExpandableText from "./components/ExpandableText";
 
 function App() {
-  const [bugs, setBugs] = useImmer([
-    { id: 1, title: "Big" },
-    { id: 2, title: "Small" },
-  ]);
-
-  const handleClick = () => {
-    // setBugs( bugs.map((item) => (item.id === 2 ? { ...item, title: "Bug" } : item)) );
-
-    setBugs((draft) => {
-
-      const bug = draft.find((item) => item.id === 2)!;
-      bug.title = "Bug";
-      
-    });
-  };
-
   return (
     <>
-      {bugs}
-      <Like onClick={handleClick}></Like>
-      <Like onClick={handleClick}></Like>
+      <ExpandableText>
+        The substring() method of String values returns the part of this string
+        from the start index up to and excluding the end index, or to the end of
+        the string if no end index is supplied.
+      </ExpandableText>
     </>
   );
 }
