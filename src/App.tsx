@@ -11,6 +11,7 @@ import ExpandableText from "./components/ExpandableText";
 import Form from "./components/Form";
 import ExpenseList from "./components/ExpanseTracker/components/ExpenseList";
 import ExpenseFilter from "./components/ExpanseTracker/components/ExpenseFilter";
+import ExpenseForm from "./components/ExpanseTracker/components/ExpenseForm";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -30,6 +31,17 @@ function App() {
 
   return (
     <>
+      <div className="mb-4">
+        <ExpenseForm
+          onSubmit={(expense) =>
+            setExpenses((draft) => {
+              // ExpenseForm 传递过来的 expense 没有 id, 需要设置
+              draft.push({ id: draft.length + 1, ...expense });
+            })
+          }
+        ></ExpenseForm>
+      </div>
+
       <div className="mb-3">
         <ExpenseFilter
           onSelectCategory={(category: string) => setSelectedCategory(category)}

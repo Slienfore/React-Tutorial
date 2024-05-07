@@ -16,7 +16,7 @@ const ExpanseList = ({ expenses, onDelete }: Props) => {
   if (!expenses.length) return null;
 
   return (
-    <table className="table table-bordered">
+    <table className="table table-bordered text-center">
       {/* HEAD */}
       <thead>
         <tr>
