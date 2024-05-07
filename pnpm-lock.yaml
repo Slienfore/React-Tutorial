@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@hookform/resolvers':
+    specifier: 2.9.11
+    version: 2.9.11(react-hook-form@7.51.4)
   bootstrap:
     specifier: 5.2.3
     version: 5.2.3(@popperjs/core@2.11.8)
@@ -29,6 +32,9 @@ dependencies:
   use-immer:
     specifier: ^0.9.0
     version: 0.9.0(immer@10.1.1)(react@18.3.1)
+  zod:
+    specifier: 3.20.6
+    version: 3.20.6
 
 devDependencies:
   '@types/react':
@@ -485,6 +491,14 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@hookform/resolvers@2.9.11(react-hook-form@7.51.4):
+    resolution: {integrity: sha512-bA3aZ79UgcHj7tFV7RlgThzwSSHZgvfbt2wprldRkYBcMopdMvHyO17Wwp/twcJasNFischFfS7oz8Katz8DdQ==, tarball: https://registry.npmmirror.com/@hookform/resolvers/-/resolvers-2.9.11.tgz}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.51.4(react@18.3.1)
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.5:
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==, tarball: https://registry.npmmirror.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.5.tgz}
@@ -962,3 +976,7 @@ packages:
   /yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==, tarball: https://registry.npmmirror.com/yallist/-/yallist-3.1.1.tgz}
     dev: true
+
+  /zod@3.20.6:
+    resolution: {integrity: sha512-oyu0m54SGCtzh6EClBVqDDlAYRz4jrVtKwQ7ZnsEmMI9HnzuZFj8QFwAY1M5uniIYACdGvv0PBWPF2kO0aNofA==, tarball: https://registry.npmmirror.com/zod/-/zod-3.20.6.tgz}
+    dev: false
